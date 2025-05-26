@@ -1495,7 +1495,7 @@ class Speedtest(object):
                     cum.append(3600)
                 h.close()
 
-            avg = round((sum(cum) / 6) * 1000.0, 3)
+            avg = round((sum(cum) / 3) * 1000.0, 3)
             results[avg] = server
 
         try:
