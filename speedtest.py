@@ -1417,7 +1417,7 @@ class Speedtest(object):
 
         return self.servers
 
-    def get_closest_servers(self, limit=45):
+    def get_closest_servers(self, limit=105):
         """Limit servers to the closest speedtest.net servers based on
         geographic distance
         """
