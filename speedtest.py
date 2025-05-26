@@ -1723,6 +1723,15 @@ def parse_args():
         parser.add_argument = parser.add_option
     except AttributeError:
         pass
+    parser.add_argument('--no-geo-filter', action='store_true', default=False,
+                    help='Skip geographic filtering and test ALL servers for latency. '
+                         'This will test every available server but may take longer.')
+
+    parser.add_argument('--closest-servers', type=PARSER_TYPE_INT, default=5,
+                    help='Number of closest servers to test for best latency when '
+                         'geographic filtering is enabled. Default 5. Ignored when '
+                         '--no-geo-filter is used.')
+    
     parser.add_argument('--no-download', dest='download', default=True,
                         action='store_const', const=False,
                         help='Do not perform download test')
